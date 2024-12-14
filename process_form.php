@@ -14,14 +14,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Validate form inputs
     if (!empty($name) && !empty($email) && !empty($subject) && !empty($message)) {
         // Your MySQL connection details
-        $host = 'localhost';
-        $user = 'root'; // Update if using a different username
-        $password = ''; // Your MySQL password (if any)
-        $database = 'portfolio'; // Replace with your database name
-        $port = 3306; // Update to your MySQL port if necessary
+        $host = 'sql108.infinityfree.com'; // Your MySQL Hostname
+        $user = 'if0_37905611';           // Your MySQL Username
+        $password = 'Zj7H7APeztxxYTp';    // Your MySQL Password
+        $database = 'if0_37905611_portfolio_db'; // Your Database Name
 
         // Create MySQL connection
-        $conn = new mysqli($host, $user, $password, $database, $port);
+        $conn = new mysqli($host, $user, $password, $database);
 
         // Check the connection
         if ($conn->connect_error) {
